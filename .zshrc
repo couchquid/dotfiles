@@ -90,6 +90,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias upPkg='/usr/share/ypkg/yupdate.py'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
