@@ -4,10 +4,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-export PATH=$PATH:$(go env GOPATH)/bin
-export GOPATH=$(go env GOPATH)
 
 export PATH=$PATH:~/.cargo/bin/
+export PATH=$PATH:~/Documents/development/rust-qt-binding-generator/build/src/
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -56,7 +55,7 @@ ZSH_THEME="terminalparty"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(dnf docker git npm pip sudo systemd)
+plugins=(docker git npm pip sudo systemd)
 
 source $ZSH/oh-my-zsh.sh
 
