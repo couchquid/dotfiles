@@ -12,6 +12,12 @@
     "vim.leader": ",",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
+            "before": ["<leader>", "t"],
+            "commands": [
+                "workbench.action.quickOpen",
+            ]
+        },
+        {
             "before": ["<leader>", "w"],
             "commands": [
                 "workbench.action.splitEditorLeft",
