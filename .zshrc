@@ -7,6 +7,8 @@ export ZSH=$HOME/.oh-my-zsh
 
 export PATH=$PATH:~/.cargo/bin/
 
+export PATH=$PATH:/var/lib/flatpak/exports/bin/
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -94,5 +96,4 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!{.git,node_modules,target}/*"'
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
-# Set cargo jobs to 16
-export NUM_JOBS=16
+alias fetchYml="$HOME/Documents/development/solus/common/Scripts/yauto.py"

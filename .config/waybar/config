@@ -1,0 +1,67 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 30,
+
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["tray", "custom/spotify", "backlight", "pulseaudio", "battery", "clock"],
+
+    "sway/workspaces": {
+        "format": "{name}",
+        "disable-scroll": true
+    },
+    
+    "sway/window": {
+        "max-length": 80,
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 16
+    },
+
+    "custom/spotify": {
+        "interval": 3,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/spotify.sh",
+        "exec-if": "pgrep spotify",
+        "escape": true
+    },
+
+    "clock": {
+        "format": "{:%a %d %b %H:%M}",
+        "tooltip": false
+    },
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "{capacity}% ",
+        "interval": 45,
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+   
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-alt": "{volume} {icon}",
+        "format-alt-click": "click-right",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": [""],
+        "on-scroll-down": "light-A 5",
+        "on-scroll-up": "light -U 5"
+    }
+}
